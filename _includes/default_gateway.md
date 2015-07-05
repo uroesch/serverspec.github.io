@@ -11,7 +11,8 @@ describe default_gateway do
 end
 ```
 
-To run checks against the IPv6 default gateway, use the following syntax. 
+The above sample only operates on the IPv4 stack. To get the IPv6 default gateway, prefix either keyword with _ipv6\__. 
+If the IPv6 default route is a link local address they scope ID e.g. _%eth0_ is ommited. 
 
 ```ruby
 describe default_gateway do
@@ -20,7 +21,7 @@ describe default_gateway do
 end
 ```
 
-One can also explicity use the IPv4 prefix.
+An IPv4 prefix is also available.
 
 ```ruby
 describe default_gateway do
